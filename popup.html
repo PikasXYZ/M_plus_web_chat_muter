@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>M+ Chat Muter Settings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 15px;
+            width: 300px;
+        }
+
+        h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            margin-bottom: 10px;
+            padding: 5px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            text-align: center;
+            display: block;
+            width: 100%;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #status {
+            margin-top: 10px;
+            color: green;
+            font-size: 12px;
+            height: 15px;
+            text-align: center;
+        }
+
+        .desc {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>M+ 靜音設定</h3>
+    <div class="desc">請輸入要靜音的聊天室名稱 (一行一個):</div>
+    <textarea id="muteList" placeholder="例如：
+王小明
+公司群組
+..."></textarea>
+    <div class="footer">
+        <button id="saveBtn">儲存設定 (Save Settings)</button>
+        <p style="font-size: 11px; color: #888; margin-top: 8px;">
+            ⚠️網頁音效在被靜音聊天室非置頂的狀態下無法攔截
+            </br>
+            建議 "關閉這個網站的音訊" 以獲得最佳體驗
+            </br>
+            (Windows 通知仍會有聲音)
+        </p>
+    </div>
+    <div id="status"></div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
